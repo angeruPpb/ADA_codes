@@ -60,7 +60,7 @@ int kruskal(vector<arista>& aristas, vector<int>& vertices, vector<arista>& solu
 }
 
 int main() {
-    vector<arista> arist = {
+    vector<arista> aristas = {
         arista{1,2,4}, arista{1,8,8},
         arista{2,3,8}, arista{2,8,11},
         arista{3,4,7}, arista{3,6,4},
@@ -68,9 +68,9 @@ int main() {
         arista{5,6,10}, arista{6,7,2},
         arista{7,8,1}, arista{7,9,6},
         arista{8,9,7}, arista{3,9,2} };
-    vector<int> vert(9,0);
+    vector<int> vertices(9,0);
     vector<arista> solucion;
-    while (kruskal(arist, vert, solucion));
+    while (kruskal(aristas, vertices, solucion));
     cout << "Ini\t" << "Fin\t" << "Peso\t" << endl;
     for (arista i : solucion) 
         cout << i.ini << "\t" << i.fin << "\t" << i.peso << endl;
